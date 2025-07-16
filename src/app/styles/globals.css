@@ -1,0 +1,20 @@
+/* src/app/globals.css */
+
+/* 1. Tailwind’s layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 2. Your custom base styles */
+@layer base {
+  html {
+    font-size: 18px; /* now 1rem = 18px */
+    color: var(--foreground);
+  }
+
+  body {
+    background-color: var(--background);
+    font-family: var(--font-geist-sans), Arial, sans-serif;
+  }
+  
+}
