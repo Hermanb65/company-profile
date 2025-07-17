@@ -11,11 +11,11 @@ type Post = {
   inserted_at: string;
   slug: string;
 };
-
-const { data: posts, error } = await supabase
-  .from("posts")
-  .select("*")
-  .order("inserted_at", { ascending: false });
+export default async function BlogPage() {
+  const { data: posts, error } = await supabase
+    .from("posts")
+    .select("*")
+    .order("inserted_at", { ascending: false });
 
   if (error) {
     return (
