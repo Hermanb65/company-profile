@@ -14,8 +14,8 @@ type Post = {
 
 export default async function BlogPage() {
   const { data: posts, error } = await supabase
-    .from<Post>("posts")
-    .select("id, title, content, author_id, inserted_at, slug")
+    .from("posts")
+    .select("*")
     .order("inserted_at", { ascending: false });
 
   if (error) {
